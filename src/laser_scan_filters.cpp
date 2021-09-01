@@ -40,6 +40,7 @@
 #include "laser_filters/box_filter.h"
 #include "laser_filters/box_count_filter.h"
 #include "laser_filters/out_of_box_filter.h"
+#include "laser_filters/fill_gaps_filter.h"
 #include "sensor_msgs/LaserScan.h"
 #include "filters/filter_base.h"
 
@@ -58,3 +59,4 @@ PLUGINLIB_EXPORT_CLASS(laser_filters::LaserScanBoxFilter, filters::FilterBase<se
 PLUGINLIB_EXPORT_CLASS(laser_filters::LaserScanBoxCountFilter, filters::FilterBase<sensor_msgs::LaserScan>)
 PLUGINLIB_EXPORT_CLASS(laser_filters::LaserScanOutOfBoxFilter, filters::FilterBase<sensor_msgs::LaserScan>)
 PLUGINLIB_EXPORT_CLASS(laser_filters::LaserScanMaskFilter, filters::FilterBase<sensor_msgs::LaserScan>)
+PLUGINLIB_EXPORT_CLASS(laser_filters::LaserScanFillGapsFilter, filters::FilterBase<sensor_msgs::LaserScan>)
