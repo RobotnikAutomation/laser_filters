@@ -56,7 +56,7 @@ public:
   bool configure()
   {
     // work around the not implemented getParam(std::string name, float& value) method
-    temp_replacement_value = std::numeric_limits<double>::quiet_NaN();
+    double temp_replacement_value = std::numeric_limits<double>::quiet_NaN();
     getParam("upper_replacement_value", temp_replacement_value);
     upper_replacement_value_ = static_cast<float>(temp_replacement_value);
 
@@ -88,7 +88,7 @@ public:
             lower_valid_index = i;
           }
         }
-        if(upper_valid_index != 0)
+        if(upper_valid_index == 0)
         {
           if(filtered_scan.ranges[input_scan_size - i- 1] != std::numeric_limits<float>::infinity() && !isnan(filtered_scan.ranges[i]))
           {
