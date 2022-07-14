@@ -78,10 +78,10 @@ public:
 
     std::string tf_message_filter_target_frame;
 
-    if (private_nh_.hasParam("/laser_filter/frequency"))
+    if (private_nh_.hasParam("frequency"))
     {
       using_custom_frequency_ = true;
-      private_nh_.getParam("/laser_filter/frequency", frequency_);
+      private_nh_.getParam("frequency", frequency_);
     }
     else
       using_custom_frequency_ = false;
